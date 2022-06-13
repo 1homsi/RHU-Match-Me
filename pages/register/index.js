@@ -11,6 +11,8 @@ export default function Register() {
     const [confirmPassword, setConfirmPassword] = useState('');
     const [username, setUsername] = useState('');
     const [error, setError] = useState('');
+    const [gender, setGender] = useState("");
+    const [RhuId, setRhuId] = useState("");
 
     const handleRegister = (e) => {
         e.preventDefault();
@@ -22,7 +24,9 @@ export default function Register() {
             auth.createUserWithEmailAndPassword(email, password).then((authUser) => {
                 db.collection('users').doc(authUser.user.uid).set({
                     username: username,
-                    email: email
+                    email: email,
+                    gender: gender,
+                    Id: RhuId
                 }).catch((error) => {
                     console.log(error);
                 });
@@ -43,6 +47,12 @@ export default function Register() {
                         placeholder="Username"
                     />
                     <input
+                        value={RhuId}
+                        onChange={(e) => setRhuId(e.target.value)}
+                        type="password"
+                        placeholder="Rhu Student ID"
+                    />
+                    <input
                         value={email}
                         onChange={(e) => setEmail(e.target.value.toLocaleLowerCase())}
                         type="email"
@@ -60,13 +70,19 @@ export default function Register() {
                         type="password"
                         placeholder="Confirm password"
                     />
+                    <label>Gender</label>
+                    <div onChange={(e) => setGender(e.target.value)} className={styles.innerDiv}>
+                        <input type="radio" value="male" /> Male
+                        <input type="radio" value="female" /> Female
+                        <input type="radio" value="Fuckee" /> Fuckee
+                    </div>
                     <button>create</button>
                     <p className="message">Already registered? <Link href="/login">Sign In</Link></p>
                 </form>
                 {
                     error && <p className={styles.error}>{error}</p>
                 }
-            </div>
-        </div>
+            </div >
+        </div >
     );
 };
