@@ -72,9 +72,9 @@ export default function Register() {
                     />
                     <label>Gender</label>
                     <div onChange={(e) => setGender(e.target.value)} className={styles.innerDiv}>
-                        <input type="radio" value="male" /> Male
-                        <input type="radio" value="female" /> Female
-                        <input type="radio" value="Fuckee" /> Fuckee
+                        <input type="radio" value="male" name="male" /> Male
+                        <input type="radio" value="female" name="female" /> Female
+                        <input type="radio" value="fuckee" name="fuckee" /> Fuckee
                     </div>
                     <button>create</button>
                     <p className="message">Already registered? <Link href="/login">Sign In</Link></p>
