@@ -11,9 +11,30 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      
+
       <main className={styles.main}>
 
       </main>
+
+
+      {/* //contains the images for to swipe through */}
+      <div className={styles.card}>
+
+
+
+
+
+
+        {/* //like and cancel buttons will be in the div below  */}
+        <div>
+
+        </div>
+
+
+
+      </div>
+
     </div>
   );
 }
