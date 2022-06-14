@@ -38,3 +38,34 @@
     margin-left: 30%;
     height: 500px;
 }   
+
+.buttonNope{
+    background-color: rgb(244, 27, 27);
+    border: 3px solid black;
+    border-radius: 10px;
+    color: white;
+    padding-right: 10%;
+    padding-left: 10%;
+    margin-right: 10%;
+}
+
+.buttonNope:hover{
+    background-color: rgb(165, 27, 27);
+}
+
+.button{
+    background-color: rgb(27, 244, 31);
+    border: 3px solid black;
+    border-radius: 10px;
+    color: white;
+    padding-right: 10%;
+    padding-left: 10%;
+    margin-left: 20%;
+}
+.button:hover{
+    background-color: rgb(27, 165, 31);
+}
+
+.btcContainer {
+       
+}

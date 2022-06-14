@@ -2,6 +2,8 @@ import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 
+
+
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -23,16 +25,20 @@ export default function Home() {
 
 
 
-
-
-
-        {/* //like and cancel buttons will be in the div below  */}
-        <div>
-
+        <div className={styles.cardImage}>
+          {/* <Image src="/images/1.jpg" alt="1" width={300} height={300} /> */}
         </div>
 
 
-
+        
+        <div className='btcContainer'>
+          <button className={styles.buttonNope}>
+          <h2 className='styels.textin'>{'<'}NoPe</h2>
+          </button>
+          <button className={styles.button}>
+          <h2 className='styels.textin'>LiKe{'>'}</h2>
+          </button>
+        </div>
       </div>
 
     </div>
